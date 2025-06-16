@@ -1,69 +1,70 @@
-# DIY-Al-Companion-Robot-Based-on-Breadboard-and-ESP32
+# DIY AI Companion Robot “Xiaozhi”  
 
-# DIY AI Companion Robot “Xiaozhi”
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
+[![Build Status](https://github.com/your-org/xiaozhi/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/xiaozhi/actions)  
+[![Release](https://img.shields.io/github/v/release/your-org/xiaozhi)](https://github.com/your-org/xiaozhi/releases)  
+[![Issues](https://img.shields.io/github/issues/your-org/xiaozhi)](https://github.com/your-org/xiaozhi/issues)  
+[![Stars](https://img.shields.io/github/stars/your-org/xiaozhi)](https://github.com/your-org/xiaozhi/stargazers)  
+[![Last Commit](https://img.shields.io/github/last-commit/your-org/xiaozhi)](https://github.com/your-org/xiaozhi/commits/main)  
 
-A breadboard-based, ESP32-powered AI companion robot that listens, thinks, moves, and speaks—bringing emotional support and practical assistance right to your desk.
+A breadboard-based, ESP32-powered desktop companion that listens, thinks, moves, and speaks—bridging technology and emotional support on your desk.
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
 - **Multi-Modal Interaction**  
   - Offline wake-word detection (ESP-SR)  
-  - Streamed ASR → LLM → TTS (DeepSeek, Doubao, Qianwen)  
-  - OPUS audio codec, sub-second response
+  - Real-time ASR → LLM → TTS pipeline (DeepSeek, Doubao, Qianwen)  
+  - OPUS audio codec for sub-second responsiveness
 
-- **Connectivity & Control**  
-  - Wi-Fi + ML307 Cat.1 4G fail-over  
-  - WebSocket or MQTT+UDP over MCP protocol  
-  - Local & cloud device control (volume, lights, motors, GPIO)
+- **Robust Connectivity & Control**  
+  - Dual-mode Wi-Fi & ML307 Cat.1 4G fail-over  
+  - WebSocket or MQTT+UDP via MCP protocol  
+  - Local & cloud control of volume, lights, motors, GPIO
 
-- **Hardware Platform**  
-  - ESP32-C3 / ESP32-S3 / ESP32-P4  
+- **Versatile Hardware Platform**  
+  - Supports ESP32-C3, ESP32-S3, ESP32-P4  
   - SSD1306 OLED & RGB LED ring  
-  - 3D speaker module + voiceprint recognition  
-  - Rotating camera for face & screen monitoring  
+  - 3D speaker module with voiceprint recognition  
+  - Rotating camera for face and screen monitoring
 
-- **Physical Actions**  
+- **Expressive Physical Actions**  
   1. Sit / Stand  
   2. Walk Forward (10 steps)  
   3. Turn Left / Right 90°  
   4. Head LED toggle  
-  5. Ambient-LED breathing effect  
+  5. Ambient LED breathing  
   6. Wave “Hello”
 
-- **Conversational Persona**  
+- **Companion Persona**  
   - **Xiaozhi**: cheerful Taiwanese-accented Mandarin  
   - Pre-set female voice (TW-Cute-F01, SSML-tuned)  
-  - Tested in small talk, comforting, jokes, study tips
+  - Evaluated in small talk, comforting, jokes, and study tips
 
 ---
 
 ## 📋 Quick Start
 
-### 1. Hardware Assembly
+### 1. Assemble Hardware
 
-1. **Solder & Mount** on a breadboard:  
+1. **Solder & mount** on a breadboard:  
    - ESP32 dev board, MAX98357A amp, INMP441 mic  
-   - SSD1306 OLED, ML307 4G module (keep ≥ 3 cm from mic)  
-   - Servo brackets & cables for four dog-leg servos  
+   - SSD1306 OLED, ML307 4G module (≥ 3 cm from mic)  
+   - Servo brackets & cables for four servos  
 2. **Power**: Li-ion battery → charging module → battery socket  
 3. **Connect**: speaker, LEDs, camera, antenna, GPIO lines  
 
-> See `docs/assembly.md` for step-by-step photos.
-
----
+> See `docs/assembly.md` for detailed photos.
 
 ### 2. Flash Firmware
 
 ```bash
-# Clone and build
 git clone --recursive https://github.com/your-org/xiaozhi.git
 cd xiaozhi/firmware
 
-# Configure & flash to your ESP32
 idf.py set-target esp32s3
-idf.py menuconfig        # set Wi-Fi / MQTT / WebSocket options
+idf.py menuconfig        # Configure Wi-Fi / MQTT / WebSocket
 idf.py flash monitor
 
 ### 3. Run & Interact
@@ -78,7 +79,7 @@ Lights On
 Ambient On
 Wave
 
-3. Watch **Xiaozhi** move, light up, and speak back!
+📊3. Watch **Xiaozhi** move, light up, and speak back!
 
 | Action                  | Latency  | Accuracy / Stability       | Outcome |
 |-------------------------|----------|----------------------------|---------|
