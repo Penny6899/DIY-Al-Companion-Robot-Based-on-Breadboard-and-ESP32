@@ -1,12 +1,5 @@
 # DIY AI Companion Robot “Xiaozhi”  
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
-[![Build Status](https://github.com/your-org/xiaozhi/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/xiaozhi/actions)  
-[![Release](https://img.shields.io/github/v/release/your-org/xiaozhi)](https://github.com/your-org/xiaozhi/releases)  
-[![Issues](https://img.shields.io/github/issues/your-org/xiaozhi)](https://github.com/your-org/xiaozhi/issues)  
-[![Stars](https://img.shields.io/github/stars/your-org/xiaozhi)](https://github.com/your-org/xiaozhi/stargazers)  
-[![Last Commit](https://img.shields.io/github/last-commit/your-org/xiaozhi)](https://github.com/your-org/xiaozhi/commits/main)  
-
 A breadboard-based, ESP32-powered desktop companion that listens, thinks, moves, and speaks—bridging technology and emotional support on your desk.
 
 ---
